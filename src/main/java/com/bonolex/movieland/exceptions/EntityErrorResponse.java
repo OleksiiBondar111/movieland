@@ -1,8 +1,6 @@
 package com.bonolex.movieland.exceptions;
 
-/**
- * Created by OBondar on 10.03.2019.
- */
+
 public class EntityErrorResponse    {
     private int status;
     private String message;
