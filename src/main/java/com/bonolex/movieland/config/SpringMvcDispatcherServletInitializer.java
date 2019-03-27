@@ -2,9 +2,7 @@ package com.bonolex.movieland.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-/**
- * Created by OBondar on 10.03.2019.
- */
+
 public class SpringMvcDispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 
@@ -17,6 +15,6 @@ public class SpringMvcDispatcherServletInitializer extends AbstractAnnotationCon
     }
 
     protected String[] getServletMappings() {
-        return new String[]{"/"};
+        return new String[]{"/v1/*"};
     }
 }

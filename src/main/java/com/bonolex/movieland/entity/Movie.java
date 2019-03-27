@@ -1,10 +1,8 @@
 package com.bonolex.movieland.entity;
 
-/**
- * Created by OBondar on 10.03.2019.
- */
+
 public class Movie {
-    private Long Id;
+    private Long id ;
     private String nameRussian;
     private String nameNative;
     private String yearOfRelease;
@@ -13,11 +11,11 @@ public class Movie {
     private String picturePath;
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getNameRussian() {
@@ -66,5 +64,18 @@ public class Movie {
 
     public void setPicturePath(String picturePath) {
         this.picturePath = picturePath;
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "id=" + id +
+                ", nameRussian='" + nameRussian + '\'' +
+                ", nameNative='" + nameNative + '\'' +
+                ", yearOfRelease='" + yearOfRelease + '\'' +
+                ", rating=" + rating +
+                ", price=" + price +
+                ", picturePath='" + picturePath + '\'' +
+                '}';
     }
 }

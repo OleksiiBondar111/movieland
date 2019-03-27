@@ -2,28 +2,22 @@ package com.bonolex.movieland.rest;
 
 import com.bonolex.movieland.entity.Movie;
 import com.bonolex.movieland.exceptions.EntityErrorResponse;
-import com.bonolex.movieland.exceptions.MovieNotFoundException;
 import com.bonolex.movieland.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.PostConstruct;
-import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by OBondar on 10.03.2019.
- */
+
 
 @RestController
-@RequestMapping("/v1")
+@RequestMapping("/")
 public class MovieLandRestController {
 
     @Autowired
-    MovieService movieService;
+    private MovieService movieService;
 
     @GetMapping("/movie")
     public List<Movie> getMovies() {
